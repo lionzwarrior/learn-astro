@@ -1,15 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import H1 from "../../components/H1.astro";
 import Main from "../../components/Main.astro";
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 
-const {slug} = Astro.params;
-const post = await getEntryBySlug("posts", slug as string);
+const { slug } = Astro.params;
+const post = await getEntry("posts", slug as string);
 
-if(!post) {
-  return Astro.redirect('/404');
+if (!post) {
+  return Astro.redirect("/404");
 }
 const { Content } = await post.render();
 ---
@@ -25,7 +25,7 @@ const { Content } = await post.render();
       class="rounded-2xl shadow-xl mb-4 aspect-thumbnail object-cover"
     />
     <div class="prose prose-2xl overflow-visible relative mb-20">
-        <Content></Content>
+      <Content />
     </div>
   </Main>
 </Layout>
