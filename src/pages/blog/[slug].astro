@@ -4,6 +4,7 @@ import H1 from "../../components/H1.astro";
 import Main from "../../components/Main.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getEntry } from "astro:content";
+import { render } from "astro:content";
 
 const { slug } = Astro.params;
 const post = await getEntry("posts", slug as string);
@@ -11,7 +12,7 @@ const post = await getEntry("posts", slug as string);
 if (!post) {
   return Astro.redirect("/404");
 }
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title}>

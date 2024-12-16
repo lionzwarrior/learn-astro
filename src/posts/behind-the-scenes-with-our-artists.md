@@ -1,11 +1,11 @@
 ---
-author: michael-scott
+author: dwight-schrute
 categories: ["studio tips"]
 date: 08/10/2021
 featured: false
-image: /images/drums.jpg
-title: Tune your snare drum
-slug: tune-your-snare-drum
+image: ./images/photoshoot.jpg
+title: Behind the scenes with our artists
+slug: behind-the-scenes-with-our-artists
 ---
 
 Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
